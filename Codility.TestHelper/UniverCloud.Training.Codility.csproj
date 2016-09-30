@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\UniverCloud.Training.Codility.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -41,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnswerHelper.cs" />
+    <Compile Include="ArrayHelper.cs" />
     <Compile Include="TestCase\ThreeArgsTestCase.cs" />
     <Compile Include="TestCase\_TestCaseBase.cs" />
     <Compile Include="TestCase\TwoArgsTestCase.cs" />
@@ -48,6 +50,7 @@
     <Compile Include="TestData\ITestData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestCase\SingleArgTestCase.cs" />
+    <Compile Include="TestData\ArrayAndExtraIntArgTestData.cs" />
     <Compile Include="TestData\TestDataBase.cs" />
     <Compile Include="TestRunner.cs" />
   </ItemGroup>

@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Text;
+﻿using System.Text;
 
 namespace UniverCloud.Training.Codility.TestData
 {
@@ -8,7 +7,7 @@ namespace UniverCloud.Training.Codility.TestData
     /// </summary>
     public class ArrayTestData : TestDataBase
     {
-        private int size;
+        private readonly int size;
         private bool initialized;
 
         /// <summary>
@@ -66,28 +65,9 @@ namespace UniverCloud.Training.Codility.TestData
         public override string PrintInputData()
         {
             var a = GetArg<int[]>();
-            var sb = new StringBuilder(string.Format("N={0}. A=[", a.Length));
-
-            if (a.Length > 10)
-            {
-                var firstElements = a.Take(3);
-                foreach (var n in firstElements)
-                    sb.AppendFormat("{0}, ", n);
-
-                sb.Append(" ... ");
-
-                var lastElements = a.Skip(a.Length - 3).Take(3);
-                foreach (var n in lastElements)
-                    sb.AppendFormat("{0}, ", n);
-            }
-            else
-            {
-                foreach (var n in a)
-                    sb.AppendFormat("{0}, ", n);
-            }
-
-            var result = sb.ToString();
-            return result.Substring(0, result.Length - 2) + "]";
+            var sb = new StringBuilder(string.Format("N={0}. ", a.Length));
+            sb.Append(ArrayHelper.PrintArray(a));
+            return sb.ToString();
         }
     }
 }
